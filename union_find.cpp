@@ -11,39 +11,38 @@ using namespace std;
 */
 
 struct Union_Find {
-    vector<int> rank, parent;
+    vector<int> repr, sz;
 
     Union_Find(int n) {
-        rank.resize(n);
-        parent.resize(n);
+        repr.resize(n);
+        sz.resize(n, 1);
         for (int i = 1; i < n; i++) {
-            parent[i] = i;
+            repr[i] = i;
         }
     }
 
-    auto Find(int x) -> int {
-        if (parent[x] == x) {
-            return x;
+    auto Find(int a) -> int {
+        if (a != repr[a]) {
+            repr[a] = Find(repr[a]);
         }
-        else {
-            parent[x] = Find(parent[x]);
-            return parent[x];
-        }
+        return repr[a];
     }
 
-    auto Union(int x, int y) -> void {
-        int x_root = Find(x);
-        int y_root = Find(y);
-        if (rank[x_root] > rank[y_root]) {
-            parent[y_root] = x_root;
+    auto Union(int a, int b) -> void {
+        a = Find(a);
+        b = Find(b);
+        if (a == b) {
+            return;
         }
-        else if (rank[x_root] < rank[y_root]) {
-            parent[x_root] = y_root;
+        if (sz[b] > sz[a]) {
+            swap(a, b);
         }
-        else if (x_root != y_root) {
-            parent[y_root] = x_root;
-            rank[x_root] = rank[x_root] + 1;
-        }
+        repr[b] = a;
+        sz[a] += sz[b];
+    }
+
+    auto size(int a) -> int {
+        return sz[Find(a)];
     }
 };
 
