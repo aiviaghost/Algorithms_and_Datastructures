@@ -3,11 +3,9 @@
 using namespace std;
 
 /*
-* Time complexity: O(1) for both "Find" and "Union".
+* Time complexity: O(1) (close enough anyway, technically bound by inverse ackermann function) 
+* for both "Find" and "Union" (And size() since it just calls Find()).
 * Note that creating a UF for N items is O(N).
-*
-* Implementation of the pseudo code from the wikipedia article about the datastructure. 
-* (Can be found at https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 */
 
 struct Union_Find {
