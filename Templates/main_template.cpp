@@ -13,6 +13,7 @@ template <typename T, typename... Args> auto make(T init, size_t first, Args... 
 }
 
 const int INF = 2e9;
+const int MOD = 1e9 + 7;
 
 auto main() -> int {
     cin.tie(0)->sync_with_stdio(0);
