@@ -4,6 +4,7 @@ using namespace std;
 
 using ll = long long;
 using pii = pair<int, int>;
+using pll = pair<ll, ll>;
 using pdd = pair<double, double>;
 
 template <typename T> vector<T> make(T init, size_t size) { return vector<T>(size, init); }
