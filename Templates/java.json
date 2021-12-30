@@ -1,0 +1,27 @@
+{
+    "main": {
+        "prefix": "main", 
+        "body": [
+            "package fileName;", 
+            "", 
+            "import java.io.*;", 
+            "import java.math.*;", 
+            "import java.util.*;", 
+            "", 
+            "public class fileName {", 
+            "", 
+            "\tfinal int INF = (int) 2e9;", 
+            "", 
+            "\tpublic static void main(String[] args) throws IOException {", 
+            "\t\tBufferedReader in = new BufferedReader(new InputStreamReader(System.in));", 
+            "\t\tPrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));", 
+            "", 
+            "\t\t$0", 
+            "", 
+            "\t\tout.flush();", 
+            "\t\tout.close();", 
+            "\t}", 
+            "}"
+        ]
+    }
+}
