@@ -14,12 +14,17 @@ template <typename T, typename... Args> auto make(T init, size_t first, Args... 
 }
 
 #define all(x) x.begin(), x.end()
+#define in(x, a) (x.find(a) != x.end())
 
 const int INF = 2e9;
 const int MOD = 1e9 + 7;
 
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
+#define unordered_map gp_hash_table
+
 auto main() -> int {
     cin.tie(0)->sync_with_stdio(0);
-    
+
     
 }
