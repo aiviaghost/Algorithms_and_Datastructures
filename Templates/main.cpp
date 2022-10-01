@@ -13,8 +13,8 @@ template <typename T, typename... Args> auto make(T init, size_t first, Args... 
     return vector<decltype(inner)>(first, inner);
 }
 
-#define all(x) x.begin(), x.end()
-#define in(x, a) (x.find(a) != x.end())
+#define all(xs) xs.begin(), xs.end()
+#define in(xs, a) (xs.find(a) != xs.end())
 
 const int INF = 2e9;
 const int MOD = 1e9 + 7;
