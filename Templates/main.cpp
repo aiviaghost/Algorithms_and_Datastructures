@@ -17,6 +17,7 @@ template <typename T, typename... Args> auto make(T init, size_t first, Args... 
 using namespace __gnu_pbds;
 #define unordered_map gp_hash_table
 
+#define int ll
 #define all(xs) xs.begin(), xs.end()
 #define in(xs, a) (xs.find(a) != xs.end())
 #define size(x) (ll)(x).size()
@@ -24,7 +25,7 @@ using namespace __gnu_pbds;
 const int INF = 2e9;
 const int MOD = 1e9 + 7;
 
-auto main() -> int {
+signed main() {
     cin.tie(0)->sync_with_stdio(0);
 
     
